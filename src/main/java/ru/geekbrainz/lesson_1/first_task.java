@@ -9,7 +9,7 @@ public class first_task {
     }
         public static boolean sum (byte a, byte b){
 
-            if ((a + b <= 10) & (a + b >= 20)) {
+            if ((a + b <= 10) && (a + b >= 20)) {
                 return false;
             } else {
                 return true;

@@ -17,6 +17,7 @@ public class ninth_task {
                 min=intArr[i];
             }
         }
-        //System.out.println(max, min);
+        System.out.println(max);
+        System.out.println(min);
     }
 }

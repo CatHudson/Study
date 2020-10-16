@@ -19,5 +19,10 @@ public class Task01 {
                 arr[i][j] = ' ';
             }
         }
+        for (int i =0; i<arr.length/2+1; i++){
+            for (int j=i; j<arr.length-i; j++){
+                arr[i][j] = '*';
+            }
+        }
     }
 }

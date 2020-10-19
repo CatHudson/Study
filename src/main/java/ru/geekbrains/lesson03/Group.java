@@ -5,20 +5,21 @@ import java.util.Arrays;
 public class Group {
 
     private String GroupName;
-    private Employee [] emps = new Employee[10];
+    private Employee [] emps;
+    private static final byte max_emps = 10;
 
     public void DeleteEmp (byte emp_no) {
         emps [emp_no] = null;
     }
 
     public void DeleteAllEmps () {
-        for (byte i=0; i<10; i++) {
+        for (byte i=0; i<max_emps; i++) {
             emps [i] = null;
         }
     }
 
     public void AddEmp (Employee new_emp) {
-        for (byte i=0; i<10; i++) {
+        for (byte i=0; i<max_emps; i++) {
             if (emps[i] == null) {
                 emps[i] = new_emp;
                 break;
@@ -42,7 +43,7 @@ public class Group {
 
     public Group(String groupName, Employee[] emps) {
         this.GroupName = groupName;
-        this.emps = emps;
+        this.emps = new Employee[max_emps];
     }
 
     public String getGroupName() {

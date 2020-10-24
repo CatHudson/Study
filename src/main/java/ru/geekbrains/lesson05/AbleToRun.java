@@ -2,5 +2,5 @@ package ru.geekbrains.lesson05;
 
 public interface AbleToRun {
 
-    void run();
+    double getRunning_length();
 }

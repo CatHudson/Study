@@ -8,9 +8,13 @@ public class Treadmill extends Obstacle {
         this.value = value;
     }
     public boolean canPass (Participant participant) {
-        boolean result = participant.getRunning_length() >= value;
-        System.out.printf("Участник %s %s пробежал дорожку длиной %f%n",
-                participant.getName(), result ? "" : "не", value);
-        return result;
+        if (participant instanceof AbleToRun) {
+            AbleToRun ableToRun = (AbleToRun) participant;
+            boolean result = ableToRun.getRunning_length() >= value;
+            System.out.printf("Участник %s %s пробежал дорожку длиной %f%n",
+                    participant.getName(), result ? "" : "не", value);
+            return result;
+        }
+        return false;
     }
 }

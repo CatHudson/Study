@@ -25,8 +25,6 @@ public class Challenge {
                 }
         );
 
-        //competition.compete();
-        Cat cat1 = new Cat ("test", 1.5, 555);
-        cat1.jump();
+        competition.compete();
     }
 }

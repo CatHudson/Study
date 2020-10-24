@@ -1,10 +1,15 @@
 package ru.geekbrains.lesson05;
 
 public class Bird extends Participant implements AbleToFly {
-    public Bird(String name, double flying_length) {
-        super(name, 0, 0, 0, flying_length);
-    }
-    public void fly () {
 
+    private final double flying_length;
+    public Bird(String name, double flying_length) {
+        super(name);
+        this.flying_length = flying_length;
+    }
+
+    @Override
+    public double getFlying_length() {
+        return flying_length;
     }
 }

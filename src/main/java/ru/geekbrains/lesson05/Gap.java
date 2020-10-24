@@ -8,9 +8,13 @@ public class Gap extends Obstacle {
         this.value = value;
     }
     public boolean canPass (Participant participant) {
-        boolean result = participant.getFlying_length() >= value;
-        System.out.printf("Участник %s %s перелетел пропасть длиной %f%n",
-                participant.getName(), result ? "" : "не", value);
-        return result;
+        if (participant instanceof AbleToFly) {
+            AbleToFly ableToFly = (AbleToFly) participant;
+            boolean result = ableToFly.getFlying_length() >= value;
+            System.out.printf("Участник %s %s перелетел пропасть длиной %f%n",
+                    participant.getName(), result ? "" : "не", value);
+            return result;
+        }
+        return false;
     }
 }

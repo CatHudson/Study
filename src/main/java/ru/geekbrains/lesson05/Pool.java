@@ -9,10 +9,13 @@ public class Pool extends Obstacle {
     }
 
     public boolean canPass (Participant participant) {
-        boolean result = participant.getSwimming_length() >= value;
-        System.out.printf("Участник %s %s переплыл бассейн длиной %f%n",
-                participant.getName(), result ? "" : "не", value);
-        return result;
+        if (participant instanceof AbleToSwim) {
+            AbleToSwim ableToSwim = (AbleToSwim) participant;
+            boolean result = ableToSwim.getSwimming_length() >= value;
+            System.out.printf("Участник %s %s переплыл бассейн длиной %f%n",
+                    participant.getName(), result ? "" : "не", value);
+            return result;
+        }
+        return false;
     }
-
 }

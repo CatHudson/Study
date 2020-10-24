@@ -1,12 +1,16 @@
 package ru.geekbrains.lesson05;
 
 public class Robot extends Participant implements AbleToRun {
+
+    private final double running_length;
+
     public Robot(String name, double running_length) {
-        super(name, 0, 855, 0, 0);
+        super(name);
+        this.running_length = running_length;
     }
 
-    public void run() {
-
+    @Override
+    public double getRunning_length() {
+        return running_length;
     }
-
 }

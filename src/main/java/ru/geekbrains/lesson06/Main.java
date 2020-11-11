@@ -14,10 +14,10 @@ public class Main {
         }
         arr[3][3] = "sdf";
         sumArr(arr);
-        String[][] arr = new String[5][5];
+        String[][] arr1 = new String[5][5];
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 5; j++) {
-                arr[i][j] = "1";
+                arr1[i][j] = "1";
             }
         }
         sumArr(arr);
